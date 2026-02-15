@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Bookmark App
 
-## Getting Started
+## Description
+This is a web application that allows users to log in with Google, add, view, and delete bookmarks. It is built using *Next.js, **Supabase, and **Tailwind CSS*.
 
-First, run the development server:
+## Live App
+[View the live app here](https://smart-bookmark-app-26zs.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- *Frontend:* Next.js, React, Tailwind CSS
+- *Backend / Database:* Supabase
+- *Authentication:* Google OAuth via Supabase
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Challenges I Faced
+1. *Supabase environment variables:*  
+   Initially, the app didn’t work on Vercel because the NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY were not correctly added to Vercel’s environment variables.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. *Prerendering error on Next.js:*  
+   I kept getting Error: supabaseKey is required during build.  
+   *Solution:* Ensured environment variables were correctly prefixed with NEXT_PUBLIC_ and added them in Vercel under Environment Variables.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. *Deployment issues with Vercel:*  
+   At first, login worked locally but failed on the live URL because of the redirect URL in Supabase authentication settings.  
+   *Solution:* Added the correct Vercel URL as the Redirect URL in Supabase authentication configuration.
 
-## Learn More
+## How I Solved the Problems
+- Verified all *environment variables* in .env.local and Vercel.
+- Used the *App Router* structure correctly in Next.js.
+- Ensured the *live Vercel URL* is added as the redirect URL for Google OAuth.
+- Tested login and bookmark functionalities before submitting.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## GitHub Repository
+[View the code here](https://github.com/rutujashinde7120-hub/smart-bookmark-app)
