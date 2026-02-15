@@ -6,6 +6,9 @@ This is a web application that allows users to log in with Google, add, view, an
 ## Live App
 [View the live app here](https://smart-bookmark-app-26zs.vercel.app/)
 
+## GitHub Repository
+[Smart Bookmark App Repository](https://github.com/rutujashinde7120-hub/smart-bookmark-app)
+
 ## Tech Stack
 - *Frontend:* Next.js, React, Tailwind CSS
 - *Backend / Database:* Supabase
@@ -31,3 +34,9 @@ This is a web application that allows users to log in with Google, add, view, an
 
 ## GitHub Repository
 [View the code here](https://github.com/rutujashinde7120-hub/smart-bookmark-app)
+
+## How to Run Locally
+
+```bash
+npm install
+npm run dev
